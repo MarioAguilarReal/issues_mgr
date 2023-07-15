@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}{{issue.summary}}{% endblock title %}
+
+{% block content %}
+<h1 class="text-info">{{issue.summary}}</h1>
+<h3 class="text-success">{{issue.description}}</h3>
+<h6 class="text-danger">Created on: {{issue.created_on}} by {{issue.author}}</h6>
+<p class="text-primary">Assignated to: {{issue.assignee}}</p>
+<p class="text-primary">Assignated by: {{issue.reporter}}</p>
+
+{% endblock content %}
