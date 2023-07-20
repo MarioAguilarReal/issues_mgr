@@ -1,0 +1,11 @@
+.container-list{
+    display:flex;
+    justify-content: center;
+}
+
+.container-list .to-do, .container-list .in-progress, .container-list .done{
+    flex: 3;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

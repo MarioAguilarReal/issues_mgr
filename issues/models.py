@@ -44,5 +44,5 @@ class Issue(models.Model):
         return self.summary
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse('detail', args=[self.id])
 
