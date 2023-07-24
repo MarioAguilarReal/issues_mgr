@@ -34,7 +34,7 @@ class IssueListView(ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         reporter_team = self.request.user.team
-        po_role = Role.objects.get(name="product owner")
+        po_role = Role.objects.get(name="Product Owner")
         to_do_status = Status.objects.get(name="to do")
         in_p_status = Status.objects.get(name="in progress")
         done_status = Status.objects.get(name="done")
@@ -54,7 +54,7 @@ class IssueDetailView(
     template_name = "issues/detail.html"
     model = Issue
 
-    def test_func(self):
+    # def test_func(self):
 
 
 
@@ -65,6 +65,7 @@ class IssueCreateView(
     LoginRequiredMixin,
     CreateView,
     UserPassesTestMixin):
+
     template_name = "issues/new.html"
     model = Issue
     fields = ['summary', 'description', 'status', 'priority', 'assignee']
